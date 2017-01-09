@@ -1,0 +1,181 @@
+body
+{
+background:#000;
+padding:0 0 0 0;
+margin:0 0 0 0;
+}
+
+img
+{
+border:none;
+}
+
+#header
+{
+width:100%;
+position:relative;
+margin:0 auto;
+
+}
+
+#logo
+{
+position:relative;
+top:10px;
+padding-bottom:20px;
+left:0;
+width:90%;
+max-width:1040px;
+clear:both;
+z-index:9999;
+margin: 0 auto;
+}
+
+#outerwrapper
+{
+position:relative;
+width:100%;
+z-index:1;
+clear:both;
+}
+
+#slidewrapper
+{
+width:100%;
+height:auto;
+min-height:300px;	
+position:relative;
+clear:both;
+margin:0 auto;
+padding: 0 0 20px 0;
+top:0;
+z-index:1;
+}
+
+.slide
+{
+position:absolute;
+top:0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear, height 0px 1.6s;
+width:100%;
+height:auto;
+padding: 0 0 0 0;
+margin: 0 0 0 0;
+}
+
+.slide.active
+{
+display:block;
+}
+
+.slide.paused
+{
+display:block;
+opacity:1;
+visibility:visible;
+}
+
+#slidewrapper .slide img
+{
+width:100%;
+height:auto;
+}
+
+/* slide animation */
+
+.current {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+   -webkit-animation-delay: 3s; /* Safari 4.0 - 8.0 */
+    animation-delay: 3s;
+	z-index:999!important;
+	height:auto;
+	width:100%;
+}
+
+#slidenavigation
+{
+width:110px;
+position:absolute;
+top:30px;
+left:4%;
+z-index:999;
+background:rgba(000,000,000,0.4);
+padding:10px;
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+}
+
+#next, #previous, #play, #pause
+{
+font-size:28px;
+color:#fff;
+}
+
+#pause.hidden{
+display:none;
+}
+
+#pause, #play
+{
+display:block;
+position:relative;
+float:left;
+left: 23px;
+}
+
+#play{
+display:none;
+}
+
+#play.visible{
+display:block;
+}
+
+#next
+{
+display:block;
+position:relative;
+float:right;
+right:0;
+}
+
+#previous
+{
+display:block;
+position:relative;
+float:left;
+left:0;
+}
+
+#next:hover, #previous:hover, #play:hover, #pause:hover
+{
+cursor:pointer;
+}
+
+#footer
+{
+font-size:14px;
+line-height:1.2;
+color:#ddd;
+width:95%;
+max-width:500px;
+margin:0 auto;
+padding:15px 0 15px 0;
+clear:both;
+position:relative;
+}
+
+#footer a
+{
+color:#ddd;
+}
+
+.copy
+{
+font-size:12px;
+}
